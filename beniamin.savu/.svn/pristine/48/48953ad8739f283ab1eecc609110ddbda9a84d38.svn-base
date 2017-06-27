@@ -1,0 +1,7 @@
+package com.iquestgroup.remotelearning.week1.p4.beniamin;
+
+public interface Connection {
+
+	public Connection makeConnection();
+
+}

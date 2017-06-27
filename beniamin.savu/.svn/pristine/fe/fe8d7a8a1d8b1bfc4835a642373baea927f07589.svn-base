@@ -1,0 +1,8 @@
+package com.iquestgroup.remotelearning.week1.p4.beniamin;
+
+public interface Connection {
+
+	public Connection makeConnection();
+
+	//Mihai: how does this stop me from creating a Connection outside of ConnectionManager?
+}

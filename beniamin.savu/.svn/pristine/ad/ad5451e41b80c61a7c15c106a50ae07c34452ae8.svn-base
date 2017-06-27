@@ -1,0 +1,36 @@
+package com.iquest.week7.pr2;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Deck {
+	private List<Card> cards;
+	private Random rand = new Random();
+	private int shuffeled = 0;
+	
+	Deck(List<Card> cards){
+		this.cards = cards;
+	}
+
+	@Override
+	public String toString() {
+		return cards.toString();
+	}
+
+	public void shuffle() {
+		shuffeled = 1;
+		
+		List<Card> temporaryCards = new ArrayList<Card>(cards);
+		cards.clear();
+		while(!temporaryCards.isEmpty()){
+			int nextCard = rand.nextInt(temporaryCards.size());
+			cards.add(temporaryCards.get(nextCard));
+			temporaryCards.remove(nextCard);
+		}
+	}
+	
+	public int isShuffeled(){
+		return shuffeled;
+	}
+}

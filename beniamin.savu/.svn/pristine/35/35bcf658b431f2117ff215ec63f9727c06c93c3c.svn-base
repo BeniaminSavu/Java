@@ -1,0 +1,22 @@
+package com.iquest.week5.pr3;
+
+import java.io.File;
+import java.lang.reflect.Method;
+import java.net.URL;
+
+public class App {
+    public static void main( String[] args ) throws NoSuchMethodException, SecurityException, ClassNotFoundException, InstantiationException, IllegalAccessException {
+
+    	System.out.println(MyClass.class.getName());
+    	
+    	String progClass = MyClass.class.getName();
+    	
+    	
+    	SimpleClassLoader loader = new SimpleClassLoader(SimpleClassLoader.class.getClassLoader());
+    	Object myClass = loader.loadClass(progClass).newInstance();
+        System.out.println(myClass);
+        
+        
+        
+    }
+}

@@ -1,0 +1,83 @@
+package com.iquest.week5;
+
+import java.util.Date;
+
+public class CustomDate {
+	private Day day;
+	private Month month;
+	private int year;
+
+	CustomDate(Date date) {
+		day = getDayFromDate(date);
+		month = getMonthFromDate(date);
+		year = date.getYear() + 1900;
+	}
+
+	public String getDay() {
+		return day.toString();
+	}
+
+	public String getMonth() {
+		return month.toString();
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	@Override
+	public String toString() {
+		return day + " " + month + " " + year;
+	}
+
+	private Month getMonthFromDate(Date date) {
+		switch (date.getMonth()) {
+		case 0:
+			return Month.January;
+		case 1:
+			return Month.February;
+		case 2:
+			return Month.March;
+		case 3:
+			return Month.April;
+		case 4:
+			return Month.May;
+		case 5:
+			return Month.June;
+		case 6:
+			return Month.July;
+		case 7:
+			return Month.August;
+		case 8:
+			return Month.September;
+		case 9:
+			return Month.October;
+		case 10:
+			return Month.November;
+		case 11:
+			return Month.December;
+		}
+		return null;
+	}
+
+	private Day getDayFromDate(Date date) {
+		switch (date.getDay()) {
+		case 0:
+			return Day.Sunday;
+		case 1:
+			return Day.Monday;
+		case 2:
+			return Day.Tuesday;
+		case 3:
+			return Day.Wednesday;
+		case 4:
+			return Day.Thursday;
+		case 5:
+			return Day.Friday;
+		case 6:
+			return Day.Saturday;
+		}
+		return null;
+	}
+
+}

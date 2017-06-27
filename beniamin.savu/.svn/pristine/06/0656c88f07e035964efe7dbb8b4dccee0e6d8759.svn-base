@@ -1,0 +1,21 @@
+package com.iquestgroup.remotelearning.week3.p1.beniamin;
+
+public class EnglishPerson extends Person{
+	private int birthDate;
+	
+	EnglishPerson(String fullName, int birthDate) {
+		super(fullName);
+		this.birthDate = birthDate;
+	}
+
+	@Override
+	public int getBirthDate() {
+		return birthDate;
+	}
+
+	@Override
+	public void selfDescribe() {
+		System.out.println("Hello from EnglishPerson I was born in " + this.getBirthDate());
+	}
+
+}

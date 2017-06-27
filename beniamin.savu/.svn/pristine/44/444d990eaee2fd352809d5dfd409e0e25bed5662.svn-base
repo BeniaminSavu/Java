@@ -1,0 +1,14 @@
+package com.iquestgroup.remotelearning.week3.p1.beniamin;
+
+public class Applictaion {
+
+	public static void main(String[] args) {
+		
+		Person person1 = new EnglishPerson("Savu Beniamin", 1995);
+		Person person2 = new FrenchPerson("Gogoasa Ceva", 2000);
+		person1.selfDescribe();
+		person2.selfDescribe();
+
+	}
+
+}

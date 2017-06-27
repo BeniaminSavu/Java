@@ -1,0 +1,19 @@
+package com.iquestgroup.remotelearning.week1.p3.beniamin;
+
+public class Application {
+
+	public static void main(String[] args) {
+		
+		Customer customer = new Customer();
+		Registry registry = new Registry();
+		Registrar registrar = new Registrar(registry);
+		Reseller reseller = new Reseller(registrar);
+		Customer customer2 = new Customer();
+
+		customer.contact(reseller);
+		customer.buyDomain("asd", "safas", "gfds");
+		customer2.contact(reseller);
+		customer2.buyDomain("asd", "safas", "gfds");
+		System.out.println(customer);
+	}
+}

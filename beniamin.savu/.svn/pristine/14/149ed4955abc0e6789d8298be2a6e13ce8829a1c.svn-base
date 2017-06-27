@@ -1,0 +1,43 @@
+package com.iquestint.week4p3;
+
+import java.util.Random;
+
+public class Sentence {
+	private String[] article = {"the", "a", "one", "some", "any"};
+	private String[] noun = {"boy", "girl", "dog", "town", "car"};
+	private String[] verb = {"drove", "jumped", "ran", "walked", "skipped"};
+	private String[] preposition = {"to", "from", "over", "under", "on"};
+	private StringBuilder sentence = new StringBuilder();
+	private Random rand = new Random();
+
+	Sentence(){
+		//Mihai: remove sentance generation logic from constructor
+		//Mihai: eventually move the logic to a SentanceGenerator class
+		int random = rand.nextInt(5);
+		sentence.append(article[random]);
+		sentence.setCharAt(0, Character.toUpperCase(article[random].charAt(0)));
+		sentence.append(" ");
+		sentence.append(noun[rand.nextInt(5)]);
+		sentence.append(" ");
+		sentence.append(verb[rand.nextInt(5)]);
+		sentence.append(" ");
+		sentence.append(preposition[rand.nextInt(5)]);
+		sentence.append(" ");
+		sentence.append(article[rand.nextInt(5)]);
+		sentence.append(" ");
+		sentence.append(noun[rand.nextInt(5)]);
+		sentence.append(".");
+	}
+	
+	@Override
+	public String toString() {
+		return sentence.toString();
+	}
+	
+	/**
+	 * Display a sentence formed from random words
+	 */
+	public void display(){
+		System.out.println(sentence);
+	}
+}

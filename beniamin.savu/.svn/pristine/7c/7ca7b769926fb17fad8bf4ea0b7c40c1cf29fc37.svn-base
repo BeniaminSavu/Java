@@ -1,0 +1,30 @@
+package com.iquestgroup.remotelearning.week1.p3.beniamin;
+
+public class Reseller {
+	private Registrar registrar;
+	private Customer customer;
+
+	public void createDomain(Domain domain) {
+		customer.setDomain(domain);
+		registrar.getRegistry().add(domain);
+	}
+
+	public Reseller(Registrar registrar) {
+		this.registrar = registrar;
+	}
+
+	public void contactRegistrar(Domain domainToBuy) {
+		registrar.addReseller(this);
+		registrar.checkRegistry(domainToBuy);
+	}
+
+	public void addCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public void inform() {
+		customer.setDomain(null);
+		System.out.println("Domain is not available");
+	}
+
+}

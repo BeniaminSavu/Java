@@ -1,0 +1,14 @@
+package com.iquest.week5;
+
+import java.util.Date;
+
+public class App {
+
+	public static void main(String[] args) {
+		 Date date = new Date(2016, 4, 16);
+		 CustomDate customDate = new CustomDate(date);
+		 
+		 System.out.println(customDate);
+		
+	}
+}

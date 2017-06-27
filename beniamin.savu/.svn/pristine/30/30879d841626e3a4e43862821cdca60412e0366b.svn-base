@@ -1,0 +1,26 @@
+package com.iquest.week7pr4;
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+    public static void main( String[] args ){
+    	HashMap<Train, List<Integer>> map = new HashMap<Train, List<Integer>>();
+    	HashMapGenerator generator = new HashMapGenerator();
+    	List<Train> trains = new ArrayList<Train>();
+    	
+    	
+    	generator.generate(map);
+    	trains = generator.getTrains();
+    	
+    	System.out.println(map.get(trains.get(1000)));
+    	System.out.println(map.size());
+    }
+}

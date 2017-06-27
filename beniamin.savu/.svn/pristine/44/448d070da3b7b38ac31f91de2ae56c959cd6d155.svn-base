@@ -1,0 +1,9 @@
+package com.iquest.week5.pr2;
+
+
+public interface SomeInterface {
+	
+	void doesSomething(String string);
+	
+	void doesSomethingElse(String string);
+}

@@ -1,0 +1,76 @@
+package com.iquest.week5;
+
+import org.hamcrest.Matcher;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
+
+import java.util.Date;
+
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+
+public class CustomDateTest {
+	
+	@Test
+    public void testMonth() {
+        //WHEN
+        CustomDate actualDate = new CustomDate(new Date(116, 3, 16));
+
+        //THEN
+        assertThat(actualDate.getDay(), is("Saturday"));
+    }
+	
+	@Test
+    public void testDay() {
+        //WHEN
+        CustomDate actualDate = new CustomDate(new Date(116, 6, 16));
+
+        //THEN
+        assertThat(actualDate.getMonth(), is("July"));
+    }
+	
+	@Test
+    public void testYear() {
+        //WHEN
+        CustomDate actualDate = new CustomDate(new Date(120, 3, 16));
+
+        //THEN
+        assertThat(actualDate.getYear(), is(2020));
+    }
+	
+	@Test
+    public void testDate() {
+        //WHEN
+        CustomDate actualDate = new CustomDate(new Date(115, 3, 16));
+
+        //THEN
+        assertThat(actualDate.toString(), is("Thursday April 2015"));
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

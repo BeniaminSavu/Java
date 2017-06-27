@@ -1,0 +1,32 @@
+package com.iquest.week5.pr2;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
+public class MyProxyHandler implements InvocationHandler {
+
+	private Object object;
+	private LogCollector logCollector;
+	
+	public  MyProxyHandler(Object object, LogCollector logCollector) {
+        this.object = object;
+        this.logCollector = logCollector;
+    }
+	
+	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+		Object result;
+	
+		Class aClass = SomeClass.class;
+		Method methodToCheck = aClass.getMethod(method.getName(), method.getParameterTypes());
+
+		if(methodToCheck.isAnnotationPresent(Logged.class)){
+			logCollector.addMessage(methodToCheck.getName() + " is Annotated");
+		}else{
+			logCollector.addMessage(methodToCheck.getName() + " is not Annotated");
+		}
+		
+		result = method.invoke(object, args);
+		return result;
+	}
+	
+}

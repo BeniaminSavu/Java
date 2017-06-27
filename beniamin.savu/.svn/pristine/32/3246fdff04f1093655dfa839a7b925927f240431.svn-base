@@ -1,0 +1,27 @@
+package com.iquestgroup.remotelearning.week1.p3.beniamin;
+
+public class Registrar {
+	private Registry registry;
+	private Reseller reseller;
+
+	Registrar(Registry registry) {
+		this.registry = registry;
+	}
+
+	public void checkRegistry(Domain domainToBuy) {
+		if (registry.domainAvailable(domainToBuy)) {
+			reseller.createDomain(domainToBuy);
+		} else {
+			reseller.inform();
+		}
+	}
+
+	public void addReseller(Reseller reseller) {
+		this.reseller = reseller;
+	}
+
+	public Registry getRegistry() {
+		return registry;
+	}
+
+}

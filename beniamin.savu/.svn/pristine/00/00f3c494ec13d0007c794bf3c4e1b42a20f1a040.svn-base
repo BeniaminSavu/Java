@@ -1,0 +1,18 @@
+package com.iquest.week7.pr2;
+
+public class Card {
+	private int number;
+	private int suite;
+	
+	Card(int number, int suite){
+		this.number = number;
+		this.suite = suite;
+	}
+
+	@Override
+	public String toString() {
+		return "Card [number=" + number + ", suite=" + suite + "]";
+	}
+	
+	
+}

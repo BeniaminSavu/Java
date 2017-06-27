@@ -1,0 +1,31 @@
+package com.iquestgroup.remotelearning.week1.p3.beniamin;
+
+public class Customer {
+
+	private Domain domain;
+	private Reseller reseller;
+
+	Customer() {
+		domain = new Domain();
+	}
+
+	public void buyDomain(String name, String ownerDetails, String hosts) {
+		Domain domainToBuy = new Domain(name, ownerDetails, hosts);
+		reseller.addCustomer(this);
+		reseller.contactRegistrar(domainToBuy);
+	}
+
+	public void setDomain(Domain domain) {
+		this.domain = domain;
+	}
+
+	public void contact(Reseller reseller) {
+		this.reseller = reseller;
+	}
+
+	@Override
+	public String toString() {
+		return "Customer [domain=" + domain + "]";
+	}
+
+}

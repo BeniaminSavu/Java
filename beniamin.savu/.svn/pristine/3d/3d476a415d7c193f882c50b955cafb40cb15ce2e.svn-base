@@ -1,0 +1,33 @@
+package com.iquestgroup.remotelearning.week1.p1.beniamin;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Application {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Person> personalities = new ArrayList<Person>();
+		String[] personalitiesData = null;
+
+		try {
+			personalitiesData = ReadFromFile
+					.readLinesFromTextFile("C:\\Users\\Beniamin\\workspace\\pr1\\src\\W1P1input.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		for (String data : personalitiesData) {
+			Person person = new Person(data);
+			if (!(personalities.contains(person))) {
+				personalities.add(person);
+			}
+		}
+
+		for (Person person : personalities) {
+			System.out.println(person);
+		}
+
+	}
+
+}

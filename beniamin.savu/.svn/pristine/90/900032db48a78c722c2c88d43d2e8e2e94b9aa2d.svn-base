@@ -1,0 +1,29 @@
+package com.iquestint.week4p4;
+
+import java.util.StringTokenizer;
+
+public class LatinSentence {
+
+	StringTokenizer wordsToTransform;
+	StringBuilder latinSentence = new StringBuilder();
+	StringBuilder latinWord = new StringBuilder();
+	
+	LatinSentence(String sentence){
+		wordsToTransform = new StringTokenizer(sentence);
+		while(wordsToTransform.hasMoreTokens()){
+			printLatinWord(wordsToTransform.nextToken());
+			latinSentence.append(latinWord);
+		}
+	}
+	
+	private void printLatinWord(String word){
+		latinWord.setLength(0);
+		latinWord.append(word.substring(1));
+		latinWord.append(word.charAt(0) + "ay");
+		latinWord.append(" ");
+		
+		System.out.print(latinWord);
+	}
+	
+	
+}

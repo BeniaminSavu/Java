@@ -1,0 +1,15 @@
+package com.iquest.week5.pr2;
+
+import java.lang.reflect.Proxy;
+
+public class ProxyFactory {
+	
+	public static LogCollector logCollector = new LogCollector();
+	
+	public static Object getInstance(Object instance){
+		return Proxy.newProxyInstance(
+				instance.getClass().getClassLoader(), 
+				new Class<?>[] { SomeInterface.class }, 
+				new MyProxyHandler(instance, logCollector));
+	}
+}

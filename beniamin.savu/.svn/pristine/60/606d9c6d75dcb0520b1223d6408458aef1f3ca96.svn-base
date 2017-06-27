@@ -1,0 +1,23 @@
+package com.iquest.week7.pr1;
+
+import java.util.List;
+
+public class BinarySearch {
+	
+	public static int searchString(List<Country> countries, String key) {
+        int first = 0;
+        int last = countries.size();
+        while (first <= last) {
+            int mid = (first + last) / 2;
+            if(key.compareTo(countries.get(mid).getCapital()) < 0){
+            	last = mid;
+            } else if (key.compareTo(countries.get(mid).getCapital()) > 0){
+            	first = mid;
+            } else{
+            	return mid;
+            }
+        }
+        return -1;
+    }
+	
+}

@@ -1,0 +1,32 @@
+package com.iquestgroup.remotelearning.week1.p2.beniamin;
+
+import java.util.Arrays;
+
+public class PrimeNumbers {
+
+	public static void main(String[] args) {
+		
+		int numberOfElements = Integer.parseInt(args[0]);
+		boolean primes[] = new boolean[numberOfElements + 1];
+		Arrays.fill(primes, true);
+		primes[0] = primes[1] = false;
+
+		for (int i = 2; i < primes.length; i++) {
+			if (primes[i]) {
+				for (int j = 2; i * j < primes.length; j++) {
+					primes[i * j] = false;
+				}
+			}
+		}
+		
+		for (int i = 1; i < primes.length; i++) {
+			if (primes[i]) {
+				System.out.println(i + "-PRIME");
+			} else {
+				System.out.println(i);
+			}
+
+		}
+	}
+
+}

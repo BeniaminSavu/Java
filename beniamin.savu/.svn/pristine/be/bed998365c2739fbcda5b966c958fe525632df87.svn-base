@@ -1,0 +1,66 @@
+package com.iquest.week7.pr1;
+
+import java.util.Comparator;
+
+public class Country{
+	private String name;
+	private String capital;
+	
+	Country(String name, String capital){
+		this.name = name;
+		this.capital = capital;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCapital() {
+		return capital;
+	}
+
+	public void setCapital(String capital) {
+		this.capital = capital;
+	}
+
+
+	public static Comparator<Country> CountryNameComparator = new Comparator<Country>() {
+
+		public int compare(Country firstCountry, Country secondCountry) {
+		   String fisrtCountryName = firstCountry.getName().toUpperCase();
+		   String secondCountryName = secondCountry.getName().toUpperCase();
+
+		   return fisrtCountryName.compareTo(secondCountryName);
+
+	    }
+	};
+	
+	public static Comparator<Country> CountryCapitalComparator = new Comparator<Country>() {
+
+		public int compare(Country firstCountry, Country secondCountry) {
+		   String firstCountryCapital = firstCountry.getCapital().toUpperCase();
+		   String secondCountryCapital = secondCountry.getCapital().toUpperCase();
+
+		   return firstCountryCapital.compareTo(secondCountryCapital);
+
+	    }
+	};
+	
+
+	@Override
+	public String toString() {
+		return "Country [name=" + name + ", capital=" + capital + "]";
+	}
+	
+	
+
+
+	
+	
+	
+	
+}

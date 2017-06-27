@@ -1,0 +1,30 @@
+package com.iquest.week7pr4;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
+
+public class HashMapGenerator {
+	private List<Integer> days = new ArrayList<Integer>();
+	private Random rand = new Random();
+	private List<Train> trains = new ArrayList<Train>();
+	
+	public void generate(HashMap<Train, List<Integer>> map)
+	{
+		for(int i=1; i<=10000; i++){
+			days.clear();
+			int numberOdDays = rand.nextInt(10) + 1;
+			for(int j = 1; j<=numberOdDays; j++){
+				days.add(rand.nextInt(365)+1);
+			}
+		
+			trains.add(new Train(Integer.toString(i),rand.nextInt(50),rand.nextInt(20)));
+			map.put(trains.get(i-1),days);
+		}
+	}
+	
+	public List<Train> getTrains(){
+		return trains;
+	}
+}
