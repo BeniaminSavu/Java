@@ -1,0 +1,5 @@
+Reading material - Thinking in Java 4th ed.
+Chapter             Page
+Enumerated Types    725
+Annotations         761 -769 (without processors)
+Type Information    393

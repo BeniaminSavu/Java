@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>
+  Generics
+</title>
+</head>
+<body>
+<h3>Assigned reading</h3>
+<ol>
+<li><a href="http://www.angelikalanger.com/GenericsFAQ/FAQSections/Fundamentals.html">Definition, purpose and benefit of Java Generics</a></li>
+<li><a href="http://docs.oracle.com/javase/tutorial/java/generics/types.html">How to create & instantiate a generic class</a></li>
+<li><a href="http://docs.oracle.com/javase/tutorial/java/generics/methods.html">How to write & call a generic method</a></li>
+<li><a href="http://docs.oracle.com/javase/tutorial/java/generics/bounded.html">Bounded generic types</a></li>
+<li>
+  <a href="http://docs.oracle.com/javase/tutorial/java/generics/wildcards.html">Wildcards</a>
+  <ul>
+    <li><a href="http://docs.oracle.com/javase/tutorial/java/generics/upperBounded.html">Upper bounded wildcards</a></li>
+    <li><a href="http://docs.oracle.com/javase/tutorial/java/generics/unboundedWildcards.html">Unbounded wildcards</a></li>
+    <li><a href="http://docs.oracle.com/javase/tutorial/java/generics/lowerBounded.html">Lower bounded wildcards</a></li>
+  </ul>
+</li>
+<li>
+  <a href="http://docs.oracle.com/javase/tutorial/java/generics/erasure.html">Type erasure</a>
+  <ul>
+    <li><a href="http://docs.oracle.com/javase/tutorial/java/generics/genTypes.html">Erasure for generic classes</a></li>
+    <li><a href="http://docs.oracle.com/javase/tutorial/java/generics/genMethods.html">Erasure for generic methods</a></li>
+  </ul>
+</li>
+<li><a href="http://docs.oracle.com/javase/tutorial/java/generics/restrictions.html">Restrictions on generics</a></li>
+</ol>
+
+<h3>Optional further reading</h3>
+<a href="http://www.angelikalanger.com/GenericsFAQ/JavaGenericsFAQ.html">Generics FAQ</a>
+</body>
+</html>
