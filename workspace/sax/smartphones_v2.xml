@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="smartphones_v2.css"?>
+<!--<!DOCTYPE smartphones SYSTEM "smartphones_v2.dtd">-->
+<smartphones xmlns="https://www.w3schools.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://www.w3schools.com smartphones_v2.xsd">
+   
+    <smartphone id="6">
+        <phoneName>LG Enact</phoneName>
+        <cpu>
+            <name>Some CPU</name>
+            <speed frequencyUnit="GHz">2.4</speed>
+        </cpu>
+        <screen_size>
+            <width sizeUnit="px">800</width>
+            <height sizeUnit="px">600</height>
+        </screen_size>
+        <memory>
+            <ram storageUnit="GB">2</ram>
+            <storage storageUnit="GB">16</storage>
+        </memory>
+        <camera>
+            <primary measureUnit="MP">8</primary>
+            <secondary measureUnit="MP">2</secondary>
+        </camera>
+        <other_specs>
+            <bluetooth>Yes</bluetooth>
+            <barometer></barometer>
+        </other_specs>
+    </smartphone>
+
+    <smartphone id="7">
+        <phoneName>Casio G’zOne Commando 4G LTE</phoneName>
+        <cpu>
+            <name>Some CPU</name>
+            <speed frequencyUnit="GHz">2.8</speed>
+        </cpu>
+        <screen_size>
+            <width sizeUnit="px">800</width>
+            <height sizeUnit="px">600</height>
+        </screen_size>
+        <memory>
+            <ram storageUnit="GB">2</ram>
+            <storage storageUnit="GB">16</storage>
+        </memory>
+        <camera>
+            <primary measureUnit="MP">8</primary>
+            <secondary measureUnit="MP">2</secondary>
+        </camera>
+        <other_specs>
+            <bluetooth></bluetooth>
+        </other_specs>
+    </smartphone>
+
+    <smartphone id="8">
+        <phoneName>BlackBerry Z10</phoneName>
+        <cpu>
+            <name>Some CPU</name>
+            <speed frequencyUnit="GHz">2.4</speed>
+        </cpu>
+        <screen_size>
+            <width sizeUnit="px">800</width>
+            <height sizeUnit="px">600</height>
+        </screen_size>
+        <memory>
+            <ram storageUnit="GB">2</ram>
+            <storage storageUnit="GB">16</storage>
+        </memory>
+        <camera>
+            <primary measureUnit="MP">8</primary>
+            <secondary measureUnit="MP">2</secondary>
+        </camera>
+    </smartphone>
+
+    <smartphone id="9">
+        <phoneName>Nokia Lumia 620</phoneName>
+        <cpu>
+            <name>Some CPU</name>
+            <speed frequencyUnit="GHz">2.4</speed>
+        </cpu>
+        <screen_size>
+            <width sizeUnit="px">800</width>
+            <height sizeUnit="px">600</height>
+        </screen_size>
+        <memory>
+            <ram storageUnit="GB">2</ram>
+            <storage storageUnit="GB">16</storage>
+        </memory>
+        <camera>
+            <primary measureUnit="MP">8</primary>
+            <secondary measureUnit="MP">2</secondary>
+        </camera>
+    </smartphone>
+
+    <smartphone id="10">
+        <phoneName>Huawei</phoneName>
+        <cpu>
+            <name>Some CPU</name>
+            <speed frequencyUnit="GHz">2.4</speed>
+        </cpu>
+        <screen_size>
+            <width sizeUnit="px">800</width>
+            <height sizeUnit="px">600</height>
+        </screen_size>
+        <memory>
+            <ram storageUnit="GB">2</ram>
+            <storage storageUnit="GB">16</storage>
+        </memory>
+        <camera>
+            <primary measureUnit="MP">8</primary>
+            <secondary measureUnit="MP">2</secondary>
+        </camera>
+    </smartphone>
+    
+    
+</smartphones>
